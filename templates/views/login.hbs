@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       {{>header}}
+</head>
+<body>
+<div class="box">
+      <h4>Login</h4>
+      <span class="spn1">
+        <pre>
+Get access to your 
+Home Page, After Login 
+Recommendations</pre
+        >
+      </span>
+      <div class="round">
+        {{!-- <div class="img"><img src="../../public/images/airlines.jpg"/></div> --}}
+      </div>
+      <div class="whitebox">
+        <form action="/login" method="post">
+        
+        <input type="email" required id="txt" name="email" autocomplete="off"/>
+        <span id="spn2">Enter Email</span>
+
+        <input type="password" required id="pass" name="password"/>
+        <span id="spn3">Enter Password</span>
+
+        <span><a href="#">Forget?</a></span>
+        
+        <p>
+          By continuing,you agree to Login's
+          <a href="#">Terms of Use </a> and <a href="#">Privacy Policy</a>
+        </p>
+        
+        <input type="submit" value="Sign in" class="login" />
+        <h3>OR</h3>
+        <input type="button" value="Request OTP" class="otp" />
+        </form>
+        <h4><a href="/registration">New to Registration? Create an account</a></h4>
+      </div>
+    </div>
+</body>
+</html>

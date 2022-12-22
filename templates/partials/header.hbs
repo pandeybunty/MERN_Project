@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: tomato;
+      }
+      .box {
+        background-color: rgb(56, 56, 241);
+        height: 500px;
+        width: 600px;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      h4 {
+        color: white;
+        margin-left: 40px;
+        font-size: 25px;
+        font-family: sans-serif;
+      }
+      pre {
+        color: white;
+        font-size: 14px;
+        font-family: sans-serif;
+        margin-top: -5px;
+        margin-left: 40px;
+        word-spacing: 3px;
+      }
+      .round {
+        height: 500px;
+        width: 500px;
+        position: relative;
+        top: 100px;
+        border-radius: 50%;
+        background-color: white;
+        padding: 1px;
+      }
+      img {
+        height: 500px;
+        width: 500px;
+        position: relative;
+        top: 0px;
+        border-radius: 50%;
+      }
+      .whitebox {
+        position: absolute;
+        top: 8px;
+        left: 590px;
+        background-color: white;
+        height: 500px;
+        width: 400px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      #txt {
+        position: relative;
+        margin: 40px;
+        margin-left: 30px;
+        width: 330px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid black;
+        font-size: 17px;
+        color: rgb(160, 160, 161);
+      }
+      #spn2 {
+        position: absolute;
+        top: 6%;
+        left: 30px;
+        transition: 0.5s;
+        font-size: 16px;
+      }
+      #txt:focus + #spn2,
+      #txt:valid + #spn2 {
+        top: 3%;
+        font-size: 15px;
+        color: rgb(160, 160, 161);
+      }
+      #txt:focus,
+      #txt:valid {
+        transition: 0.3s;
+        border-bottom: 1px solid rgb(56, 56, 241);
+      }
+      #pass {
+        position: relative;
+        margin: 15px;
+        margin-left: 30px;
+        width: 330px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid black;
+        font-size: 17px;
+        color: rgb(160, 160, 161);
+      }
+      #spn3 {
+        position: absolute;
+        top: 21.7%;
+        left: 30px;
+        transition: 0.5s;
+        font-size: 16px;
+      }
+      #pass:focus + #spn3,
+      #pass:valid + #spn3 {
+        top: 18.7%;
+        font-size: 15px;
+        color: rgb(160, 160, 161);
+      }
+      #pass:focus,
+      #pass:valid {
+        transition: 0.3s;
+        border-bottom: 1px solid rgb(56, 56, 241);
+      }
+      p {
+        width: 330px;
+        position: relative;
+        left: 30px;
+        font-size: 12.5px;
+      }
+      p a {
+        font-size: 13.5px;
+        text-decoration: none;
+        color: rgb(56, 56, 241);
+      }
+      .login {
+        cursor: pointer;
+        top: 15px;
+        outline: none;
+        border: none;
+        position: relative;
+        left: 30px;
+        height: 41px;
+        width: 330px;
+        background: rgb(56, 56, 241);
+        color: white;
+        border-radius: 2px;
+        letter-spacing: 1px;
+      }
+      h3 {
+        top: 30px;
+        position: relative;
+        text-align: center;
+        font-size: 13px;
+        color: rgb(128, 127, 127);
+      }
+      .otp {
+        cursor: pointer;
+        background-color: white;
+        top: 45px;
+        outline: none;
+        border: none;
+        position: relative;
+        border-bottom: 2px solid rgb(205, 205, 207);
+        border-left: 1px solid rgb(223, 223, 223);
+        border-right: 1px solid rgb(218, 218, 219);
+        left: 30px;
+        height: 41px;
+        width: 330px;
+        color: rgb(56, 56, 241);
+        border-radius: 2px;
+        letter-spacing: 1px;
+      }
+      h4 a {
+        position: relative;
+        left: 55px;
+        top: 75px;
+        font-size: 12px;
+        text-decoration: none;
+        color: rgb(56, 56, 241);
+      }
+      span a {
+        position: absolute;
+        top: 115px;
+        left: 330px;
+        text-decoration: none;
+        font-size: 13px;
+        color: rgb(56, 56, 241);
+      }
+    </style>
+     
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        function validation(frm){
+            if(frm.st_sname.value.trim()==""){
+                 document.getElementById("sname").innerHTML="plz fill the name";
+                 frm.st_sname.focus();
+                 return false;
+             }
+             if(frm.st_fname.value==""){
+                 document.getElementById("fname").innerHTML="plz fill the fname";
+                 frm.st_fname.focus();
+                 return false;
+             }
+              var g=document.fm.gender.value;
+              if(g==""){
+                document.getElementById("gender").innerHTML="plz select 1 option";
+                 frm.gender[0].focus();
+                 return false;
+             } 
+             if(frm.st_phone.value==""){
+                 document.getElementById("phone").innerHTML="plz fill 10 dig no";
+                 frm.st_phone.focus();
+                 return false;
+             }
+             if(frm.st_phone.value.length<10){
+                 document.getElementById("phone").innerHTML="plz fill 10 dig no";
+                 frm.st_phone.focus();
+                 return false;
+             } 
+             
+            var mail=frm.st_email.value;
+            if(mail==""){
+                 document.getElementById("email").innerHTML="plz fill the email id";
+                 frm.st_email.focus();
+                 return false;
+             } 
+             if(mail.indexOf("@")==-1){
+                document.getElementById("email").innerHTML="plz include @ symbol";
+                 frm.st_email.focus();
+                 return false;
+             }
+             if(mail.indexOf("@")==0 || mail.indexOf("@")==mail.length-1){
+                document.getElementById("email").innerHTML="email formate is incorretc";
+                 frm.st_email.focus();
+                 return false;
+             } 
+
+             else 
+              return true;
+           
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+span{
+    color: red;
+}
+sup{
+    color: red;
+}
+/* body{
+    background: url("house1.jpg");
+    background-size: cover;
+} */
+#table{
+    background-color: rgb(225, 235, 215);
+    height: 100vh;
+    width: 40rem;
+}
+#first_th{
+ /* background: url("airlines.jpg"); */
+ background-size: cover;
+}
+#last_th{
+    /* background: url("ludo.jpg"); */
+ background-size: cover;
+}
